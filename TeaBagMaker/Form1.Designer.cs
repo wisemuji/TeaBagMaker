@@ -34,6 +34,7 @@
             this.startBtn = new System.Windows.Forms.Button();
             this.Timer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
+            this.timeLeftStr = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // cbList
@@ -78,11 +79,20 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "2019-05-21 제작, 3604 김수현";
             // 
+            // timeLeftStr
+            // 
+            this.timeLeftStr.AutoSize = true;
+            this.timeLeftStr.Location = new System.Drawing.Point(296, 151);
+            this.timeLeftStr.Name = "timeLeftStr";
+            this.timeLeftStr.Size = new System.Drawing.Size(0, 12);
+            this.timeLeftStr.TabIndex = 4;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(448, 175);
+            this.Controls.Add(this.timeLeftStr);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.startBtn);
             this.Controls.Add(this.timeStr);
@@ -102,6 +112,7 @@
         private System.Windows.Forms.Button startBtn;
         private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label timeLeftStr;
     }
 }
 

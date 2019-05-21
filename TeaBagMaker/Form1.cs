@@ -15,7 +15,6 @@ namespace TeaBagMaker
         int CountNum = 0;
         string[] SList = new string[] { "홍차", "녹차", "루이보스차", "국화차" };
         int[] TList = new int[] { 10 * 60 * 2, 10 * 60 * 3, 10 * 60 * 5, 10 * 60 * 2 };
-        string[] TSList = new string[] { "2분", "3분", "5분", "2분" };
         public Form1()
         {
             InitializeComponent();
@@ -31,13 +30,13 @@ namespace TeaBagMaker
             {
                 this.cbList.SelectedIndex = 0;
             }
-            this.timeStr.Text = TSList[this.cbList.SelectedIndex];
+            this.timeStr.Text = TList[this.cbList.SelectedIndex] / 600 + "분";
 
         }
 
         private void CbList_SelectedIndexChanged_1(object sender, EventArgs e)
         {
-            this.timeStr.Text = TSList[this.cbList.SelectedIndex];
+            this.timeStr.Text = TList[this.cbList.SelectedIndex] / 600 +  "분";
 
         }
 
@@ -48,16 +47,16 @@ namespace TeaBagMaker
                 this.Timer.Enabled = false;
                 MessageBox.Show("티백을 건지세요!", "알림",
                     MessageBoxButtons.OK, MessageBoxIcon.Information);
-                this.timeStr.Text = "";
+                this.timeLeftStr.Text = "";
                 this.cbList.Focus();
             }
             else
             {
                 CountNum--;
                 if (CountNum / 10 / 60 == 0)
-                    this.timeStr.Text = Convert.ToString((CountNum / 10) % 60 + "초" + " 남았습니다!");
+                    this.timeLeftStr.Text = Convert.ToString((CountNum / 10) % 60 + "초" + " 남았습니다!");
                 else
-                    this.timeStr.Text = Convert.ToString(CountNum / 10 / 60 + "분 " + (CountNum / 10) % 60 + "초" + " 남았습니다!");
+                    this.timeLeftStr.Text = Convert.ToString(CountNum / 10 / 60 + "분 " + (CountNum / 10) % 60 + "초" + " 남았습니다!");
             }
 
         }
