@@ -28,21 +28,74 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            this.cbList = new System.Windows.Forms.ComboBox();
+            this.timeStr = new System.Windows.Forms.Label();
+            this.startBtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // cbList
+            // 
+            this.cbList.FormattingEnabled = true;
+            this.cbList.Location = new System.Drawing.Point(33, 29);
+            this.cbList.Name = "cbList";
+            this.cbList.Size = new System.Drawing.Size(274, 20);
+            this.cbList.TabIndex = 0;
+            this.cbList.SelectedIndexChanged += new System.EventHandler(this.CbList_SelectedIndexChanged_1);
+            // 
+            // timeStr
+            // 
+            this.timeStr.AutoSize = true;
+            this.timeStr.Location = new System.Drawing.Point(371, 32);
+            this.timeStr.Name = "timeStr";
+            this.timeStr.Size = new System.Drawing.Size(17, 12);
+            this.timeStr.TabIndex = 1;
+            this.timeStr.Text = "초";
+            // 
+            // startBtn
+            // 
+            this.startBtn.Location = new System.Drawing.Point(33, 67);
+            this.startBtn.Name = "startBtn";
+            this.startBtn.Size = new System.Drawing.Size(355, 57);
+            this.startBtn.TabIndex = 2;
+            this.startBtn.Text = "담그기!";
+            this.startBtn.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(33, 151);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(165, 12);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "2019-05-21 제작, 3604 김수현";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(448, 175);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.startBtn);
+            this.Controls.Add(this.timeStr);
+            this.Controls.Add(this.cbList);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private System.Windows.Forms.ComboBox cbList;
+        private System.Windows.Forms.Label timeStr;
+        private System.Windows.Forms.Button startBtn;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
 
