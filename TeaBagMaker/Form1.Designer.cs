@@ -32,7 +32,7 @@
             this.cbList = new System.Windows.Forms.ComboBox();
             this.timeStr = new System.Windows.Forms.Label();
             this.startBtn = new System.Windows.Forms.Button();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.Timer = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -41,18 +41,19 @@
             this.cbList.FormattingEnabled = true;
             this.cbList.Location = new System.Drawing.Point(33, 29);
             this.cbList.Name = "cbList";
-            this.cbList.Size = new System.Drawing.Size(274, 20);
+            this.cbList.Size = new System.Drawing.Size(173, 20);
             this.cbList.TabIndex = 0;
             this.cbList.SelectedIndexChanged += new System.EventHandler(this.CbList_SelectedIndexChanged_1);
             // 
             // timeStr
             // 
             this.timeStr.AutoSize = true;
-            this.timeStr.Location = new System.Drawing.Point(371, 32);
+            this.timeStr.Location = new System.Drawing.Point(217, 32);
             this.timeStr.Name = "timeStr";
-            this.timeStr.Size = new System.Drawing.Size(17, 12);
+            this.timeStr.Size = new System.Drawing.Size(171, 12);
             this.timeStr.TabIndex = 1;
-            this.timeStr.Text = "초";
+            this.timeStr.Text = "초ssssssssssssssssssssss";
+            this.timeStr.Click += new System.EventHandler(this.TimeStr_Click);
             // 
             // startBtn
             // 
@@ -62,6 +63,11 @@
             this.startBtn.TabIndex = 2;
             this.startBtn.Text = "담그기!";
             this.startBtn.UseVisualStyleBackColor = true;
+            this.startBtn.Click += new System.EventHandler(this.StartBtn_Click);
+            // 
+            // Timer
+            // 
+            this.Timer.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // label1
             // 
@@ -94,7 +100,7 @@
         private System.Windows.Forms.ComboBox cbList;
         private System.Windows.Forms.Label timeStr;
         private System.Windows.Forms.Button startBtn;
-        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer Timer;
         private System.Windows.Forms.Label label1;
     }
 }
