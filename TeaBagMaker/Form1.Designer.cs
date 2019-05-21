@@ -99,7 +99,7 @@
             this.Controls.Add(this.timeStr);
             this.Controls.Add(this.cbList);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "티백 시간재기";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
