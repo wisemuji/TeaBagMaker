@@ -14,7 +14,7 @@ namespace TeaBagMaker
     {
         int CountNum = 0;
         string[] SList = new string[] { "홍차", "녹차", "루이보스차", "국화차" };
-        int[] TList = new int[] { 1000 * 60 * 2, 1000 * 60 * 3, 1000 * 60 * 5, 1000 * 60 * 2 };
+        int[] TList = new int[] { 60 * 2 * 10, 10 * 60 * 3, 10 * 60 * 5, 10 * 60 * 2 };
         string[] TSList = new string[] { "2분", "3분", "5분", "2분" };
         public Form1()
         {
@@ -51,7 +51,7 @@ namespace TeaBagMaker
             else
             {
                 CountNum--;
-                this.timeStr.Text = Convert.ToString(CountNum/60000+"분"+(CountNum/10)%60+"초");
+                this.timeStr.Text = Convert.ToString(CountNum/10/60+"분"+(CountNum/10)%60+"초"+"남았습니다!");
             }
 
         }
